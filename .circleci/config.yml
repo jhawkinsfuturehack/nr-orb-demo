@@ -3,7 +3,7 @@
 version: 2.1
 
 orbs: 
-  annotate: nr-futurehack/annotate@dev:115e022102b83dfa2a9256d73e5d84dfd5670e88
+  annotate: nr-futurehack/annotate@dev:e0d7dbe46f9343d5596d8ebd3ab169354006833d
   
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
