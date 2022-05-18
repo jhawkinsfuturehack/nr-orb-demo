@@ -2,6 +2,8 @@
 
 This project demonstrates how you can instrument your CircleCI Builds with build annotations, and capture incremental build data for transmission to New Relic.
 
+![Example Dashboard](https://github.com/jhawkinsfuturehack/nr-orb-demo/blob/main/images/Test_Build_Dashboard___New_Relic_One.png)
+
 ## Setup
 To setup the project, you need to add your `NR_LICENSE_KEY` to your circleCI project:
  -> **Project Settings**->**Environment Variables**->**Add Environment Variable**
