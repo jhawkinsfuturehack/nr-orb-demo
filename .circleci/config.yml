@@ -3,12 +3,12 @@
 version: 2.1
 
 orbs: 
-  annotate: nr-futurehack/annotate@dev:01e669b253b674e78cbce84ceae827be855b7422
+  annotate: nr-futurehack/annotate@dev:6fd44a7ef9952875c397851b3a755cab309edb4f
   
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
-  say-hello:
+  my-build:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
     docker:
@@ -17,15 +17,43 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
-      - annotate/debug:
-          to: "so and so"
+      - annotate/step:
+          trace_id: "Code Compilation"
       - run:
-          name: "Say hello"
-          command: "echo Hello, World post Annotate!"
+          name: "Compile"
+          command: |
+            echo "Compilation..."
+            sleep 1
+
+      - annotate/step:
+          trace_id: "Running Tests"
+      - run:
+          name: "Compile"
+          command: |
+            echo "Running Tests..."
+            sleep 2
+
+      - annotate/step:
+          trace_id: "Deploying to Staging"
+      - run:
+          name: "Deploy to Staging"
+          command: |
+            echo "Deploy to Staging..."
+            sleep 2
+
+      - annotate/step:
+          trace_id: "Deploying to Production"
+      - run:
+          name: "Deploy to Staging"
+          command: |
+            echo "Deploy to Staging..."
+            sleep 2
+      
+      - annotate/send
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  say-hello-workflow:
+  build-with-traces-workflow:
     jobs:
-      - say-hello
+      - my-build
