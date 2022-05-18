@@ -51,7 +51,7 @@ jobs:
           command: |
             echo "Deploy to Staging..."
             sleep 2
-    
+     
       - annotate/send
 
 # Invoke jobs via workflows
