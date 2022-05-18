@@ -37,7 +37,7 @@ jobs:
           command: |
             echo "Running Tests..."
             sleep 2
-
+ 
       - annotate/step:
           trace_id: "Deploying to Staging"
       - run:
