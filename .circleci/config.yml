@@ -29,7 +29,7 @@ jobs:
           command: |
             echo "Compilation..."
             sleep 1
-
+ 
       - annotate/step:
           trace_id: "Running Tests"
       - run:
