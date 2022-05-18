@@ -2,6 +2,9 @@
 # See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
 
+orbs: 
+  annotate: nr-futurehack/annotate@dev:7a9a308314521d8dbd225eb180d89cfb7aea31e9
+  
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
@@ -14,9 +17,10 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
+      - annotate/greet
       - run:
           name: "Say hello"
-          command: "echo Hello, World!"
+          command: "echo Hello, World post Annotate!"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
