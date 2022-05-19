@@ -9,7 +9,7 @@ To setup the project, you need to add your `NR_LICENSE_KEY` to your circleCI pro
  -> **Project Settings**->**Environment Variables**->**Add Environment Variable**
 
 
-![Configuration]([https://github.com/jhawkinsfuturehack/nr-orb-demo/blob/main/images/Test_Build_Dashboard___New_Relic_One.png](https://github.com/jhawkinsfuturehack/nr-orb-demo/blob/main/images/Environment_Variables_-_nr-orb-demo.png?raw=true))
+![Configuration](https://github.com/jhawkinsfuturehack/nr-orb-demo/blob/main/images/Test_Build_Dashboard___New_Relic_One.png)
 
 ## Usage
 
