@@ -8,6 +8,9 @@ This project demonstrates how you can instrument your CircleCI Builds with build
 To setup the project, you need to add your `NR_LICENSE_KEY` to your circleCI project:
  -> **Project Settings**->**Environment Variables**->**Add Environment Variable**
 
+
+![Configuration]([https://github.com/jhawkinsfuturehack/nr-orb-demo/blob/main/images/Test_Build_Dashboard___New_Relic_One.png](https://github.com/jhawkinsfuturehack/nr-orb-demo/blob/main/images/Environment_Variables_-_nr-orb-demo.png?raw=true))
+
 ## Usage
 
 To instrument your build, you first need to include the orb for the `nr-futurehacak/annotate` orb [code](https://github.com/jhawkinsfuturehack/nr-futurehack-orb)
@@ -26,7 +29,6 @@ At the end of your script, you must add an `annotate/send` command in order to t
 ```
      - annotate/send
 ```
-
 
 ## Example
 ```
